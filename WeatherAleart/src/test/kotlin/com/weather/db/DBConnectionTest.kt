@@ -7,7 +7,8 @@ import java.sql.DriverManager
 import kotlin.test.Test
 
 @SpringBootTest
-class DBConnectionTest(
+// internal class는 해당 모듈내로 사용을 제한
+internal class DBConnectionTest(
     @Value("\${spring.datasource.url}") private val url: String,
     @Value("\${spring.datasource.username}") val name: String,
     @Value("\${spring.datasource.password}") val password: String
